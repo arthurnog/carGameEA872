@@ -1,8 +1,9 @@
-#include "../include/Car.h"
+#include "../include/Car.hpp"
 #include <fstream>
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_keyboard.h>
 #include <memory>
 #include <math.h>
 using namespace std;
