@@ -27,4 +27,5 @@ class Keyboard{
         bool get_d();
         bool get_r();
         bool get_l();
+        void reset_input();
 };

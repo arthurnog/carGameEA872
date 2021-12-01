@@ -36,3 +36,10 @@ bool Keyboard::get_u(){return this->u;}
 bool Keyboard::get_d(){return this->d;}
 bool Keyboard::get_r(){return this->r;}
 bool Keyboard::get_l(){return this->l;}
+
+void Keyboard::reset_input(){
+    this->u = false;
+    this->d = false;
+    this->l = false;
+    this->r = false;
+}
