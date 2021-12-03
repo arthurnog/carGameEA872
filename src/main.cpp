@@ -6,11 +6,12 @@
 #include <memory>
 #include <math.h>
 
+#include "../include/Model.hpp"
 #include "../include/Car.hpp"
 #include "../include/Keyboard.hpp"
 #include "./Keyboard.cpp"
 
-//deleetar depois
+//deletar depois
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 

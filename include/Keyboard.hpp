@@ -21,11 +21,11 @@ class Keyboard{
     public:
         Keyboard();
         ~Keyboard();
-        void input();
+        void input(); //checa inputs do teclado, no caso as setas
         bool get_on();
         bool get_u();
         bool get_d();
         bool get_r();
         bool get_l();
-        void reset_input();
+        void reset_input(); //Reseta os booleans referente aos inputs apos serem usados
 };
