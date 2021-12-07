@@ -7,20 +7,26 @@
 #include <vector>
 #include <memory>
 #include <math.h>
+#include <iostream>
+#include <memory>
+using namespace std;
 
 class View
 {
 private:
-    /* data */
+    vector<Car &> car;
+    SDL_Renderer* renderer;
+    SDL_Window* window;
+    vector<SDL_Rect> carTarget;
+    vector<SDL_Texture *> carSprite;
+    SDL_Texture *background;
+    int numPlayers;
+
 public:
-    View(/* args */);
+    View(vector<Car> car);
     ~View();
+    void render();
+    int get_numPlayers();
+    void set_numPlayers(int newNum);
+    void add_newCar(Car &newCar);
 };
-
-View::View(/* args */)
-{
-}
-
-View::~View()
-{
-}
