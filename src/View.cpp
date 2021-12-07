@@ -15,7 +15,7 @@ using namespace std;
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-View::View(vector<Car> car){
+View::View(vector<Car &> car) : car(car){
     // Inicializando o subsistema de video do SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {

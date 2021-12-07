@@ -23,7 +23,7 @@ private:
     int numPlayers;
 
 public:
-    View(vector<Car> car);
+    View(vector<Car &> car);
     ~View();
     void render();
     int get_numPlayers();
