@@ -10,17 +10,16 @@
 #include "../include/Car.hpp"
 #include "../include/Keyboard.hpp"
 #include "../include/View.hpp"
+#include "./Car.cpp"
+#include "./Keyboard.cpp"
+#include "./View.cpp"
 
 using namespace std;
-
-//deleetar depois
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
 
 int main() {
 
     vector<Car> players(1, Car());
-    View view = View(&players);
+    View view = View(players);
     Keyboard keyboard = Keyboard();
     while (keyboard.get_on())
     {

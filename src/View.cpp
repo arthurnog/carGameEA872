@@ -12,10 +12,8 @@
 #include <memory>
 using namespace std;
 
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
 
-View::View(vector<Car &> car) : car(car){
+View::View(vector<Car> car) : car(car){
     // Inicializando o subsistema de video do SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
@@ -27,8 +25,8 @@ View::View(vector<Car &> car) : car(car){
     this->window = SDL_CreateWindow("Demonstrção de jogo com SDL2",
                                     SDL_WINDOWPOS_UNDEFINED,
                                     SDL_WINDOWPOS_UNDEFINED,
-                                    SCREEN_WIDTH,
-                                    SCREEN_HEIGHT,
+                                    this->SCREEN_WIDTH,
+                                    this->SCREEN_HEIGHT,
                                     SDL_WINDOW_SHOWN);
     if (this->window == nullptr)
     { // Em caso de erro...
