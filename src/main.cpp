@@ -18,7 +18,12 @@ using namespace std;
 
 int main() {
 
-    vector<Car> players(1, Car());
+    vector<Car> players(2, Car());
+    cout << players[1].get_x() << endl;
+    players[0].set_x(200);
+    players[1].set_x(100);
+
+
     View view = View(players);
     Keyboard keyboard = Keyboard();
     while (keyboard.get_on())
