@@ -15,7 +15,7 @@ using namespace std;
 class View
 {
 private:
-    vector<Car> car;
+    vector<Car> &car;
     SDL_Renderer* renderer;
     SDL_Window* window;
     vector<SDL_Rect> carTarget;
@@ -26,7 +26,7 @@ private:
     int SCREEN_HEIGHT = 480;
 
 public:
-    View(vector<Car> car);
+    View(vector<Car> &car);
     ~View();
     void render();
     int get_numPlayers();

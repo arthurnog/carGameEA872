@@ -12,12 +12,12 @@
 #include "../include/Car.hpp"
 #include "../include/Controller.hpp"
 
-Controller::Controller(vector<Keyboard> keyboard, vector<Car> car) : keyboard(keyboard) , car(car) {
+Controller::Controller(vector<Keyboard> &keyboard, vector<Car> &car) : keyboard(keyboard) , car(car) {
     this->on = true;
     this->numPlayers = this->car.size();
 }
 
-Controller::~Controller() {}
+Controller::~Controller() { SDL_Quit(); }
 
 bool Controller::get_on(){
     return this->on;
@@ -31,6 +31,8 @@ void Controller::set_numPlayers(int newNum){
     this->numPlayers = newNum;
 }
 
+
+//a função polling saai daqui e vai para o servidor
 void Controller::polling(){
     for(int i = 0; i < this->numPlayers; i++) {
         this->keyboard[i].input();
@@ -93,5 +95,6 @@ void Controller::polling(){
             this->car[i].set_y(480);
         }
         this->keyboard[i].reset_input();
+        cout << car[i].get_y() << endl;
     }    
 }

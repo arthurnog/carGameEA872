@@ -11,10 +11,7 @@
 #include "../include/Keyboard.hpp"
 #include "../include/View.hpp"
 #include "../include/Controller.hpp"
-#include "./Car.cpp"
-#include "./Controller.cpp"
-#include "./Keyboard.cpp"
-#include "./View.cpp"
+
 
 using namespace std;
 
@@ -28,11 +25,13 @@ int main() {
     View view = View(players);
 
     Controller controller = Controller(keyboard, players);
-    while (controller.get_on())
-    {
+    
+    while(true){
         controller.polling();
         view.render();
+
+        SDL_Delay(10);
     }
-    SDL_Quit();
+
     return 0;
 }

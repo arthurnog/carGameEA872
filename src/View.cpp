@@ -13,7 +13,7 @@
 using namespace std;
 
 
-View::View(vector<Car> car) : car(car){
+View::View(vector<Car> &car) : car(car){
     // Inicializando o subsistema de video do SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
@@ -96,6 +96,6 @@ void View::render(){
     }
 
     SDL_RenderPresent(this->renderer);
-    SDL_Delay(10);
+    //SDL_Delay(10);
 
 }

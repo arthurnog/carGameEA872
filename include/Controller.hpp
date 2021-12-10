@@ -15,14 +15,15 @@
 class Controller {
     private:
         bool on = true;
-        vector<Keyboard> keyboard;
-        vector<Car> car;
+        vector<Keyboard> &keyboard;
+        vector<Car> &car;
         int numPlayers;
     public:
-        Controller(vector<Keyboard> keyboard, vector<Car> car);
+        Controller(vector<Keyboard> &keyboard, vector<Car> &car);
         ~Controller();
         void polling();
         bool get_on();
         int get_numPlayers();
         void set_numPlayers(int newNum);
+        void run();
 };
