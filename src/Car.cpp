@@ -5,13 +5,16 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_keyboard.h>
 #include <memory>
+#include <stdlib.h>
 #include <math.h>
 using namespace std;
 
 Car::Car(){
-    this->x_current = rand() % 540 + 40;
-    this->y_current = rand() % 380 + 40;
+    this->x_current = rand() % 540;
+    this->y_current = rand() % 380;
 }
+
+Car::~Car(){}
 
 float Car::get_x(){return this->x_current;}
 void Car::set_x(float new_x){this->x_current=new_x;}

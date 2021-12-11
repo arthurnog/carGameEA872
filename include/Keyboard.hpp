@@ -4,8 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <memory>
-#include <math.h>
 #pragma once
+#include <math.h>
 using namespace std;
 
 class Keyboard{
