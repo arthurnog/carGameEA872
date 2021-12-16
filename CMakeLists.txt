@@ -19,8 +19,8 @@ add_library(Keyboard src/Keyboard.cpp)
 target_link_libraries(CarCrash Keyboard)
 add_library(Controller src/Controller.cpp)
 target_link_libraries(CarCrash Controller)
-#add_library(receptor src/receptor.cpp)
-#target_link_libraries(CarCrash receptor)
+add_library(Server src/Server.cpp)
+target_link_libraries(CarCrash Server)
 
 
 # Garantir que usaremos C++11 (ou superior, se preciso)
@@ -30,6 +30,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Bibliotecas linkadas externamente
 target_link_libraries(CarCrash SDL2)
 target_link_libraries(CarCrash SDL2_image)
-#target_link_libraries(CarCrash pthread)
-
+target_link_libraries(CarCrash pthread)
 
