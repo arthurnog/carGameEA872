@@ -10,8 +10,8 @@
 using namespace std;
 
 Car::Car(){
-    this->x_current = rand() % 540;
-    this->y_current = rand() % 380;
+    this->x_current = (rand() % 580);
+    this->y_current = (rand() % 380);
 }
 
 Car::~Car(){}
