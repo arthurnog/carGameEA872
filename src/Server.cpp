@@ -22,7 +22,7 @@ Server::Server(){
 
 
 void Server::conecta() {
-vector<Car> players(1,Car());
+vector<Car> players(2,Car());
 
     Car car1();
     Car car2();
